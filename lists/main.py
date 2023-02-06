@@ -31,11 +31,31 @@ print(won_golden_globe('War Horse'))
 # print(result1.lower())
 #remove Joseph Toto's albums and return clean list
 remove_toto_albums = ['Fahrenheit', 'The Seventh One', 'Toto XX', 'Falling in Between', 'Toto XIV', 'Old Is New', 'World on a String', 'Rhythym in Motion', 'The Five Sacred Trees']
-toto_albums = ['Fahrenheit', 'The Seventh One', 'Toto XX', 'Falling in Between', 'Toto XIV', 'Old Is New' ]
-
-for album in toto_albums:
-    remove_toto_albums.remove(album)
-                 
+toto_albums = ['Fahrenheit', 'The Seventh One', 'Toto XX', 'Falling in Between', 'Toto XIV', 'Old Is New'] 
+if 'Fahrenheit' in remove_toto_albums:
+    remove_toto_albums.remove('Fahrenheit')
+if 'The Seventh One'in remove_toto_albums:
+    remove_toto_albums.remove('The Seventh One')
+if  'Toto XX' in remove_toto_albums:
+    remove_toto_albums.remove('Toto XX')
+if  'Falling in Between' in remove_toto_albums:
+    remove_toto_albums.remove('Falling in Between')
+if 'Old is New' in remove_toto_albums:
+    remove_toto_albums.remove('Old is New')
+    
 print(remove_toto_albums)
+
+
+    
+
+
+
+
+
+
+
+
+
+
 
 
