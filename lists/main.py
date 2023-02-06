@@ -30,8 +30,12 @@ print(won_golden_globe('War Horse'))
 #movies['movie_title'] = movies['movie_title'].str.lower()
 # print(result1.lower())
 #remove Joseph Toto's albums and return clean list
-list_of_john_albums = ['Fahrenheit', 'The Seventh One', 'Toto XX', 'Falling in Between', 'Toto XIV', 'Old Is New', 'World on a String', 'Rhythym in Motion', 'The Five Sacred Trees']
-albums_to_remove = ['Fahrenheit', 'The Seventh One', 'Toto XX', 'Falling in Between', 'Toto XIV', 'Old Is New']
+remove_toto_albums = ['Fahrenheit', 'The Seventh One', 'Toto XX', 'Falling in Between', 'Toto XIV', 'Old Is New', 'World on a String', 'Rhythym in Motion', 'The Five Sacred Trees']
+toto_albums = ['Fahrenheit', 'The Seventh One', 'Toto XX', 'Falling in Between', 'Toto XIV', 'Old Is New' ]
 
-remove_toto_albums = list(set(list_of_john_albums) - set(albums_to_remove))
+for album in toto_albums:
+    remove_toto_albums.remove(album)
+                 
 print(remove_toto_albums)
+
+
