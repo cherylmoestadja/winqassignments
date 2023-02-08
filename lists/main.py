@@ -5,45 +5,47 @@ __human_name__ = 'lists'
 # alphabetical_order = a list of strings that represent film names. It returns a list of the same films in alphabetical order. 
 
 movies = ['Jaws', 'Superman', 'Valley of the Dolls', 'Home Alone', 'Amistad', 'Memoirs of a Geisha', 'War Horse']
-alphabetical_order = sorted(movies)
-print(alphabetical_order)
+def alphabetical_order(movies):
+    return sorted(movies)
+print(alphabetical_order(movies))
 
 golden_globe_movies = ['Jaws', 'ET', 'Memoirs of a Geisha', 'Star Wars']
-movies_lower = []
-for movie in golden_globe_movies:
-    movies_lower.append(movie.lower())
+movies_lower = [movies.lower() for movies in golden_globe_movies]
 print(movies_lower)
 
-
 def won_golden_globe(movies):
-    if movies in golden_globe_movies: 
+    if 'Jaws' in movies:
         return True
-    else:
-        return False
+    if 'Memoirs of a Geisha' in movies:
+        return True
+    if 'ET' in movies:
+        return True
+    if 'Star Wars' in movies:
+        return True
+    return False
 
-won_golden_globe('Jaws')
 print(won_golden_globe('Jaws'))
-print(won_golden_globe('Home Alone'))
+print(won_golden_globe('ET'))
 print(won_golden_globe('Memoirs of a Geisha'))
-print(won_golden_globe('War Horse'))
+print(won_golden_globe('Superman'))
 
 #movies['movie_title'] = movies['movie_title'].str.lower()
 # print(result1.lower())
 #remove Joseph Toto's albums and return clean list
-remove_toto_albums = ['Fahrenheit', 'The Seventh One', 'Toto XX', 'Falling in Between', 'Toto XIV', 'Old Is New', 'World on a String', 'Rhythym in Motion', 'The Five Sacred Trees']
-toto_albums = ['Fahrenheit', 'The Seventh One', 'Toto XX', 'Falling in Between', 'Toto XIV', 'Old Is New'] 
-if 'Fahrenheit' in remove_toto_albums:
-    remove_toto_albums.remove('Fahrenheit')
-if 'The Seventh One'in remove_toto_albums:
-    remove_toto_albums.remove('The Seventh One')
-if  'Toto XX' in remove_toto_albums:
-    remove_toto_albums.remove('Toto XX')
-if  'Falling in Between' in remove_toto_albums:
-    remove_toto_albums.remove('Falling in Between')
-if 'Old is New' in remove_toto_albums:
-    remove_toto_albums.remove('Old is New')
-    
-print(remove_toto_albums)
+list_albums = ['Fahrenheit', 'The Seventh One', 'Toto XX','World on a String', 'Rhythym in Motion', 'The Five Sacred Trees']
+toto_albums = ['Fahrenheit', 'The Seventh One', 'Toto XX'] 
+# albums_john = 'World on a String', 'Rhythym in Motion', 'The Five Sacred Trees'
+
+def remove_toto_albums():    
+    if 'Fahrenheit' in list_albums:
+        list_albums.remove('Fahrenheit')
+    if 'The Seventh One' in list_albums:
+        list_albums.remove('The Seventh One')
+    if 'Toto XX' in list_albums:
+        list_albums.remove('Toto XX')
+    return list_albums
+
+print(remove_toto_albums())
 
 
     
