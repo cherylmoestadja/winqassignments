@@ -4,6 +4,7 @@ __human_name__ = 'lists'
 
 # alphabetical_order = a list of strings that represent film names. It returns a list of the same films in alphabetical order. 
 
+
 movies = ['Jaws', 'Superman', 'Valley of the Dolls', 'Home Alone', 'Amistad', 'Memoirs of a Geisha', 'War Horse']
 def alphabetical_order(movies):
     return sorted(movies)
@@ -14,20 +15,22 @@ movies_lower = [movies.lower() for movies in golden_globe_movies]
 print(movies_lower)
 
 def won_golden_globe(movies):
-    if 'Jaws' in movies:
+    if 'Jaws'in movies or 'Jaws'.lower() in movies or 'Jaws'.upper() in movies: 
         return True
-    if 'Memoirs of a Geisha' in movies:
+    if 'Memoirs of a Geisha'in movies or 'Memoirs of a Geisha'.lower() in movies or 'Memoirs of a Geisha'.upper() in movies:  
+        return True 
+    if 'ET'in movies or 'ET'.lower() in movies or 'ET'.upper() in movies:  
         return True
-    if 'ET' in movies:
+    if 'Star Wars'in movies or 'Star Wars'.lower() in movies or 'Star Wars'.upper() in movies:  
         return True
-    if 'Star Wars' in movies:
-        return True
-    return False
+    else:
+        return False
 
 print(won_golden_globe('Jaws'))
-print(won_golden_globe('ET'))
-print(won_golden_globe('Memoirs of a Geisha'))
-print(won_golden_globe('Superman'))
+print(won_golden_globe('jaws'))
+print(won_golden_globe('superman'))
+print(won_golden_globe('star wars'))
+
 
 #movies['movie_title'] = movies['movie_title'].str.lower()
 # print(result1.lower())
@@ -35,17 +38,14 @@ print(won_golden_globe('Superman'))
 list_albums = ['Fahrenheit', 'The Seventh One', 'Toto XX','World on a String', 'Rhythym in Motion', 'The Five Sacred Trees']
 toto_albums = ['Fahrenheit', 'The Seventh One', 'Toto XX'] 
 # albums_john = 'World on a String', 'Rhythym in Motion', 'The Five Sacred Trees'
+def remove_toto_albums(albums):
+    if "Fahrenheit" in list_albums:
+        list_albums.remove("Fahrenheit")
+        return list_albums
 
-def remove_toto_albums():    
-    if 'Fahrenheit' in list_albums:
-        list_albums.remove('Fahrenheit')
-    if 'The Seventh One' in list_albums:
-        list_albums.remove('The Seventh One')
-    if 'Toto XX' in list_albums:
-        list_albums.remove('Toto XX')
-    return list_albums
+print(remove_toto_albums('Fahrenheit'))
 
-print(remove_toto_albums())
+
 
 
     
