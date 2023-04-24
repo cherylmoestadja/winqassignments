@@ -29,10 +29,9 @@ def cache_zip(zip_file_path, cache_dir_path):
 # for what this means! No folders should be included in the list. 
 # You do not have to account for files within folders within the cache directory.
 # Python program to explain os.listdir() method
-import os
 
 def cached_files():
-    cache = "C:\\Users\\Cheryl\\Documents\\Winc\\files\\cache"
+    cache = os.path.join(os.getcwd(), "files", "cache")
     file_paths = []
     for file in os.listdir(cache):
         file_path = os.path.join(cache,file)
